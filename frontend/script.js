@@ -151,7 +151,7 @@ uploadForm.addEventListener('submit', async (e) => {
   formData.append('userId', userId);
 
   // const res = await fetch('http://localhost:3000/upload', {
-  const res = await fetch('http://51.21.224.100:3000/register', {
+  const res = await fetch('http://51.21.224.100:3000/upload', {
     method: 'POST',
     body: formData
   });
