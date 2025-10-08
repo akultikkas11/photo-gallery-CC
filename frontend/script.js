@@ -98,7 +98,7 @@ registerForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(registerForm);
 
-  const res = await fetch('http://localhost:3000/register', {
+  const res = await fetch('http://51.21.224.100:3000/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -122,7 +122,8 @@ loginForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(loginForm);
 
-  const res = await fetch('http://localhost:3000/login', {
+  // const res = await fetch('http://localhost:3000/login', {
+  const res = await fetch('http://51.21.224.100:3000/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -149,7 +150,8 @@ uploadForm.addEventListener('submit', async (e) => {
   const formData = new FormData(uploadForm);
   formData.append('userId', userId);
 
-  const res = await fetch('http://localhost:3000/upload', {
+  // const res = await fetch('http://localhost:3000/upload', {
+  const res = await fetch('http://51.21.224.100:3000/register', {
     method: 'POST',
     body: formData
   });
@@ -171,7 +173,8 @@ async function loadGallery() {
   if (!userId) return;
 
   galleryDiv.innerHTML = '';
-  const res = await fetch(`http://localhost:3000/my-photos/${userId}`);
+  // const res = await fetch(`http://localhost:3000/my-photos/${userId}`);
+  const res = await fetch(`http://51.21.224.100:3000/my-photos/${userId}`);
   const photos = await res.json();
 
   photos.forEach(photo => {
@@ -179,7 +182,8 @@ async function loadGallery() {
     container.classList.add('photo-card');
 
     const img = document.createElement('img');
-    img.src = `http://localhost:3000/uploads/${photo.filename}`;
+    // img.src = `http://localhost:3000/uploads/${photo.filename}`;
+    img.src = `http://51.21.224.100:3000/uploads/${photo.filename}`;
     img.width = 300;
 
     const title = document.createElement('h3');
@@ -192,7 +196,8 @@ async function loadGallery() {
     deleteBtn.textContent = 'Delete';
     deleteBtn.onclick = async () => {
       if (confirm('Delete this photo?')) {
-        await fetch(`http://localhost:3000/photos/${photo.id}`, {
+        // await fetch(`http://localhost:3000/photos/${photo.id}`, {
+        await fetch(`http://51.21.224.100:3000/photos/${photo.id}`, {
           method: 'DELETE'
         });
         loadGallery();
@@ -211,7 +216,8 @@ async function loadGallery() {
 // ✅ NEW: Load all photos (visible to all logged-in users)
 async function loadAllPhotos() {
   allPhotosDiv.innerHTML = '';
-  const res = await fetch('http://localhost:3000/photos');
+  // const res = await fetch('http://localhost:3000/photos');
+  const res = await fetch('http://51.21.224.100:3000/photos');
   const photos = await res.json();
 
   photos.forEach(photo => {
@@ -219,7 +225,8 @@ async function loadAllPhotos() {
     card.classList.add('photo-card');
 
     const img = document.createElement('img');
-    img.src = `http://localhost:3000/uploads/${photo.filename}`;
+    // img.src = `http://localhost:3000/uploads/${photo.filename}`;
+    img.src = `http://51.21.224.100:3000/uploads/${photo.filename}`;
     img.width = 250;
 
     const title = document.createElement('h4');
