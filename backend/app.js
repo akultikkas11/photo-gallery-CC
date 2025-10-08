@@ -12,6 +12,7 @@ app.use(express.json());
 // app.use(express.static('uploads')); // Serve uploaded images
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+app.use('/', express.static(path.join(__dirname, '../frontend')));
 
 const storage = multer.diskStorage({
 //   destination: './backend/uploads',
