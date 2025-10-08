@@ -1,0 +1,149 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Photo Gallery</h1>
+
+  <form id="uploadForm">
+    <input type="text" name="title" placeholder="Title" required><br>
+    <textarea name="description" placeholder="Description"></textarea><br>
+    <input type="file" name="photo" required><br>
+    <button type="submit">Upload</button>
+  </form>
+
+  <hr>
+
+  <div id="gallery"></div>
+
+  <script src="script.js"></script>
+</body>
+</html> -->
+
+<!-- ====================================================================== -->
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📷 Photo Gallery App</h1>
+
+  <div id="authSection">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="email" placeholder="Email" name="email" required><br>
+      <input type="password" placeholder="Password" name="password" required><br>
+      <button type="submit">Register</button>
+    </form>
+
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" placeholder="Email" name="email" required><br>
+      <input type="password" placeholder="Password" name="password" required><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="gallerySection" style="display:none;">
+    <h2>Welcome! Upload your photos:</h2>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="text" name="title" placeholder="Title" required><br>
+      <textarea name="description" placeholder="Description" required></textarea><br>
+      <input type="file" name="photo" required><br>
+      <button type="submit">Upload Photo</button>
+    </form>
+
+    <h2>Your Uploads:</h2>
+    <div id="gallery"></div>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 3 ====================================================================== -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📷 Photo Gallery App</h1>
+
+
+  <div class="tab-header">
+    <button class="tab-button active" onclick="showTab('login')">Login</button>
+    <button class="tab-button" onclick="showTab('register')">Register</button>
+  </div>
+
+
+  <div id="authSection">
+ 
+    <div id="loginTab" class="tab-content">
+      <form id="loginForm">
+        <input type="email" placeholder="Email" name="email" required><br>
+        <input type="password" placeholder="Password" name="password" required><br>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <div id="registerTab" class="tab-content" style="display: none;">
+      <form id="registerForm">
+        <input type="email" placeholder="Email" name="email" required><br>
+        <input type="password" placeholder="Password" name="password" required><br>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div id="gallerySection" style="display:none;">
+    <h2>Welcome! Upload your photos:</h2>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="text" name="title" placeholder="Title" required><br>
+      <textarea name="description" placeholder="Description" required></textarea><br>
+      <input type="file" name="photo" required><br>
+      <button type="submit">Upload Photo</button>
+    </form>
+
+    <h2>Your Uploads:</h2>
+    <div id="gallery"></div>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> -->
